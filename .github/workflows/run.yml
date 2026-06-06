@@ -1,0 +1,13 @@
+name: same_test # 実行スクリプト名
+on: [push] # 実行タイミング
+jobs:
+io_test:
+name: Use Linux commands # テストの名前
+runs-on: ubuntu-latest # 実行環境
+steps:
+- name: Checkout # 処理名（チェックアウト）
+uses: actions/checkout@v4 # Runner version 4で実行
+- name: Permission Setting # 処理名（権限設定）
+run: chmod +x gcd.sh test_gcd.sh # chmodで権限付与
+- name: Test Run # 処理名
+run: ./test_gcd.sh # スクリプトtest_gcd.shを実行
