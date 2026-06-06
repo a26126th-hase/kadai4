@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "This is in gcd.sh
+echo "This is in gcd.s"h
